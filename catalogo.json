@@ -1,0 +1,82 @@
+[
+{
+  "model": "core.producto",
+  "pk": 1,
+  "fields": {
+    "nombre": "Filtro de aceite",
+    "categoria": "Motor",
+    "descripcion": "Filtro para mantenimiento preventivo y cuidado del motor.",
+    "precio": 8990,
+    "imagen": "core/img/filtro_aceite.png",
+    "stock": 9,
+    "destacado": true,
+    "disponible": true,
+    "creado": "2026-05-25T15:55:06.529Z"
+  }
+},
+{
+  "model": "core.producto",
+  "pk": 2,
+  "fields": {
+    "nombre": "Pastillas de freno",
+    "categoria": "Frenos",
+    "descripcion": "Juego de pastillas para una frenada estable y segura.",
+    "precio": 24990,
+    "imagen": "core/img/pastillas_freno.png",
+    "stock": 10,
+    "destacado": true,
+    "disponible": true,
+    "creado": "2026-05-25T15:55:06.535Z"
+  }
+},
+{
+  "model": "core.producto",
+  "pk": 3,
+  "fields": {
+    "nombre": "Bateria automotriz",
+    "categoria": "Electricidad",
+    "descripcion": "Bateria de alto rendimiento para vehiculos livianos.",
+    "precio": 79990,
+    "imagen": "core/img/bateria.png",
+    "stock": 10,
+    "destacado": false,
+    "disponible": true,
+    "creado": "2026-05-25T15:55:06.540Z"
+  }
+},
+{
+  "model": "core.producto",
+  "pk": 4,
+  "fields": {
+    "nombre": "Aceite 10W-40",
+    "categoria": "Lubricantes",
+    "descripcion": "Lubricante multigrado para proteccion diaria del motor.",
+    "precio": 18990,
+    "imagen": "core/img/aceite10w.png",
+    "stock": 9,
+    "destacado": false,
+    "disponible": true,
+    "creado": "2026-05-25T15:55:06.544Z"
+  }
+},
+{
+  "model": "core.recompensa",
+  "pk": 1,
+  "fields": {
+    "producto": 2,
+    "costo_puntos": 70,
+    "activo": true,
+    "creado": "2026-05-27T01:24:51.118Z"
+  }
+},
+{
+  "model": "core.recompensa",
+  "pk": 2,
+  "fields": {
+    "producto": 4,
+    "costo_puntos": 150,
+    "activo": true,
+    "creado": "2026-05-27T01:24:51.127Z"
+  }
+}
+]
