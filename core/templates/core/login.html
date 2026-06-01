@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de Sesión | Gildemeister</title>
+  <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+  <div class="login-container">
+    <img src="{% static 'core/img/logo.png' %}" alt="Logo Gildemeister" class="logo" />
+    <h2>Iniciar Sesión</h2>
+
+    {% if error %}
+      <p class="error-message">{{ error }}</p>
+    {% endif %}
+    
+    <form method="POST" action="{% url 'login' %}">
+      {% csrf_token %}
+      <label for="username">Usuario</label>
+      <input type="text" id="username" name="username" placeholder="Ej: Bastian" required>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" placeholder="************" required>
+
+      
+
+      <button type="submit">Ingresar</button>
+    </form>
+
+    <a href="{% url 'register' %}">
+      <button type="button" class="secondary">Registrarse</button>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  {% if login_error %}
+  <script>
+  Swal.fire({
+      icon: 'error',
+      title: 'Error de inicio de sesión',
+      text: '{{ error_message }}',
+      confirmButtonColor: '#0033a0'
+  });
+  </script>
+  {% endif %}
+</body>
+</html>
